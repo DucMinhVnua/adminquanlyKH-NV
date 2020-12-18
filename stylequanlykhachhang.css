@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+
+html {
+    height: 100%;
+    background-image: url(./bank-2547356_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+* {
+    padding: 0;
+    font-family: 'Goldman', cursive;
+}
+
+body {
+    height: 80vh;
+    background: #d9dcef;
+    background-image: url(./bank-2547356_1920.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-form {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.scroll {
+    height: 300px;
+    overflow: auto;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    display: block;
+    height: 325px;
+    overflow: auto;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    letter-spacing: 1px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.btn-add a {
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+    background: #009879;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-add a:hover {
+    background: #0b6f5b;    
+    cursor: pointer;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#cn {
+    text-align: center;
+}
+
+#cn a {
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #009879;
+    text-decoration: none;
+}
+
+#cn:hover {
+    background: #e3eceb;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.animation-h2 {
+    height: 137px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*add*/
+
+.add-information {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #58565691;
+    display: flex;
+    transition: 0.5s;
+    transform: translateX(-100%);
+    z-index: 10;
+}
+
+.add-information i {
+    position: absolute;
+    right: 1%;
+    font-size: 20px;
+    opacity: 0.6;
+    cursor: pointer;
+    top: 2%;   
+}
+
+.table-add {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-flex;
+    width: 40%;
+    height: 250px;
+    background-color: #e7fff7;
+}
+
+.table-add .table-right {
+    flex: 1;
+    margin: auto;
+}
+
+.table-add .table-right input {
+    margin-bottom: 5px;
+    width: 93%;
+    outline: none;
+    height: 20px;
+}
+
+.table-add .table-left {
+    width: 30%;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.table-add .table-left div {
+    margin-bottom: 11px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+    font-weight: 600;
+}
+
+.table-add input[type="text"] {
+    display: block;
+}
+
+.button-add {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button-add input {
+    padding: 10px;
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    background: #a09f9f57;
+    border-radius: 5px;
+    outline: none;
+    border-width: 1px;
+}
+
+.button-add input:active {
+    background-color: rgb(159 208 208 / 66%);
+}
+
+.button-add input:hover {
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.25), 0 -1px 12px rgba(0,0,0,0.22);
+}
