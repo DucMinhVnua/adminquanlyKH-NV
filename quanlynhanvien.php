@@ -2,7 +2,7 @@
 	// Kết nối database
 	include_once "connect.php";
 
-	$sql = "SELECT * FROM khachhang";
+	$sql = "SELECT * FROM nhanvien";
 	$query = mysqli_query($conn, $sql);
 
 	// Kiểm tra nếu bên trong table có dữ liêu thì lấy dữ liệu ra
@@ -22,7 +22,7 @@
 
 <div class="container-form">
 	<span class="btn-add">
-		<a id="add">Thêm khách hàng</a>
+		<a id="add">Thêm nhân viên</a>
 	</span>
 
 	<table class="styled-table" action="" method ="POST">
@@ -49,8 +49,8 @@
 										<td>$row[sodienthoai]</td>
 										<td>$row[diachi]</td>
 										<td>$row[email]</td>
-							            <td id='cn' class='edit'><button><a href='editkhachhang.php?makh=$row[makh]'>Sửa</a></button></td>
-							            <td id='cn'><button><a href='delete.php?makh=$row[makh]'>Xóa</a></button></td>
+							            <td id='cn' class='edit'><button><a href='editnhanvien.php?manv=$row[manv]'>Sửa</a></button></td>
+							            <td id='cn'><button><a href='deletenhanvien.php?manv=$row[manv]'>Xóa</a></button></td>
 									<tr>
 								";	
 							} else {
@@ -60,8 +60,8 @@
 										<td>$row[sodienthoai]</td>
 										<td>$row[diachi]</td>
 										<td>$row[email]</td>
-							            <td id='cn' class='edit'><button><a href='editkhachhang.php?makh=$row[makh]'>Sửa</a></button></td>
-							            <td id='cn'><button><a href='delete.php?makh=$row[makh]'>Xóa</a></button></td>
+							            <td id='cn' class='edit'><button><a href='editnhanvien.php?manv=$row[manv]'>Sửa</a></button></td>
+							            <td id='cn'><button><a href='deletenhanvien.php?manv=$row[manv]'>Xóa</a></button></td>
 									<tr>
 								";	
 							}
@@ -75,23 +75,23 @@
 </div>
 
 <div class="add-information">
-	<form action="xulythemkhachhang.php" method="POST">
+	<form action="xulythemnhanvien.php" method="POST">
 		<i class="fas fa-times"></i>
 		<div class="table-add">
 			<div class="table-left">
-	            <div>Tên khách hàng:</div>
+	            <div>Tên nhân viên:</div>
 	            <div>Số điện thoại:</div>
 	            <div>Địa chỉ:</div>
 	            <div>Email:</div>
 			</div>
 			<div class="table-right">
-	           <input type="text" name="ten">
-	           <input type="text" name="sodienthoai">
-	           <input type="text" name="diachi">
-	           <input type="text" name="email">
+	           <input type="text" name="ten" required>
+	           <input type="text" name="sodienthoai" required>
+	           <input type="text" name="diachi" required>
+	           <input type="text" name="email" required>
 	        </div>
 	        <div class="button-add">
-	            <input type="submit" value="THÊM KHÁCH HÀNG">
+	            <input type="submit" value="THÊM NHÂN VIÊN">
 	        </div>
 		</div>
 	</form>   
